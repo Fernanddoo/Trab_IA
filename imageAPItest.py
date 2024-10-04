@@ -65,7 +65,7 @@ def send_message():
     if image_data:
         # Processar e exibir a imagem
         image = Image.open(BytesIO(image_data))
-        image.thumbnail((200, 200)) 
+        image.thumbnail((400, 400)) 
         photo = ImageTk.PhotoImage(image)
 
         # Atualizar a interface com o texto e a imagem
@@ -84,16 +84,16 @@ window = tk.Tk()
 window.title("RPG Mestre - Gemini")
 
 frame = tk.Frame(window)
-frame.pack(pady=10, padx=10)
+frame.pack(pady=20, padx=20)
 
-chat_history = scrolledtext.ScrolledText(frame, width=50, height=20)
+chat_history = scrolledtext.ScrolledText(frame, width=100, height=50)
 chat_history.grid(row=0, column=0, columnspan=2)
 
-user_input = tk.Entry(frame, width=40)
+user_input = tk.Entry(frame, width=70)
 user_input.grid(row=1, column=0, pady=10)
 
 send_button = tk.Button(frame, text="Enviar", command=send_message)
-send_button.grid(row=1, column=1, pady=10)
+send_button.grid(row=1, column=1, pady=15)
 
 imagem_label = tk.Label(frame)
 imagem_label.grid(row=1, column=2, padx=10)
