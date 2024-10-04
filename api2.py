@@ -40,7 +40,7 @@ chat_session = model.start_chat(history=[])
 
 # Função para gerar imagens a partir da resposta do Gemini usando a API da Stable Diffusion
 def generate_image(prompt):
-    url = "https://api.stable diffusion.com/v1/generate"
+    url = "https://api.stablediffusion.com/v1/generate"
     headers = {"Content-Type": "application/json"}
     data = {"prompt": prompt, "num_images": 1}
     response = requests.post(url, headers=headers, json=data)
